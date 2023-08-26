@@ -12,7 +12,7 @@ export const Experience = () => {
   const [buildMode, setBuildMode] = useAtom(buildModeAtom);
   const [characters] = useAtom(charactersAtom);
   const [map] = useAtom(mapAtom);
-  const [items, setItems] = useState(map.items);
+  const [items, setItems] = useState(map.items ?? []);
   const [onFloor, setOnFloor] = useState(false);
   useCursor(onFloor);
   const { vector3ToGrid, gridToVector3 } = useGrid();
